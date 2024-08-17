@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
         leftTitle="Feature Items"
         rightTitle="View All Feature Items"
       ></HeadingTitle>
-      <div className="flex items-center justify-around overflow-x-auto">
+      <div className="flex flex-wrap justify-center gap-4 overflow-x-auto">
         <FeaturedCard />
         <FeaturedCard />
         <FeaturedCard />

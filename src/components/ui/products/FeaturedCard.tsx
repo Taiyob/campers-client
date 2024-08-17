@@ -5,7 +5,7 @@ import a1 from "../../../assets/images/a3.webp";
 
 const FeaturedCard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 transition cursor-pointer hover:text-neutral-800">
+    <div className="flex flex-col items-center justify-center w-40 gap-2 transition cursor-pointer hover:text-neutral-800 md:w-48 lg:w-56">
       <img src={a1} alt="" />
       <div className="text-sm font-medium"></div>
     </div>
