@@ -1,0 +1,14 @@
+.navigation-menu-content {
+  position: absolute;
+  top: 100%; /* Position dropdown below the menu item */
+  left: 0; /* Align with the left edge of the menu item */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  /* Optional styling */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.navigation-menu-item {
+  position: relative; /* Ensure dropdown positions relative to the menu item */
+}
