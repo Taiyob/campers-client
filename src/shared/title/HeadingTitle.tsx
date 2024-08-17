@@ -8,9 +8,9 @@ type THeadingTitle = {
 const HeadingTitle = ({ leftTitle, rightTitle }: THeadingTitle) => {
   return (
     <div className="flex items-center justify-between my-10">
-      <h2>{leftTitle}</h2>
+      <h2 className="text-2xl font-bold text-black">{leftTitle}</h2>
       <Link to="">
-        <h5>{rightTitle}</h5>
+        <h5 className="text-sm font-semibold text-red-500">{rightTitle}</h5>
       </Link>
     </div>
   );

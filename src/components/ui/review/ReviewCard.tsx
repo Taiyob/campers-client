@@ -1,6 +1,6 @@
 const ReviewCard = () => {
   return (
-    <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex flex-col max-w-xl p-8 rounded-xl lg:p-12 dark:bg-gray-50 dark:text-gray-800">
       <div className="flex flex-col items-center w-full">
         <div className="flex space-x-1">
           <button type="button" title="Rate 1 stars" aria-label="Rate 1 stars">
