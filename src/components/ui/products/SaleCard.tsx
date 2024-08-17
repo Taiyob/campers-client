@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import saleProduct1 from "../../../assets/images/saleproduct1.webp";
 
 type TItemInfo = {
+  img: string;
   currentPrice: number;
   previousPrice?: number;
   itemName: string;
@@ -13,15 +13,12 @@ const SaleCard = ({
   previousPrice,
   itemName,
   brandName,
+  img,
 }: TItemInfo) => {
   return (
     <div className="w-full max-w-sm bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-        <img
-          className="p-8 rounded-t-lg"
-          src={saleProduct1}
-          alt="product image"
-        />
+        <img className="p-8 rounded-t-lg" src={img} alt="product image" />
       </a>
       <div className="px-5 pb-5">
         <div className="flex items-center mt-2.5 mb-5">

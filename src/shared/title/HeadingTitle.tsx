@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 type THeadingTitle = {
-  leftTitle: string;
-  rightTitle: string;
+  leftTitle?: string;
+  rightTitle?: string;
 };
 
 const HeadingTitle = ({ leftTitle, rightTitle }: THeadingTitle) => {

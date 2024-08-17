@@ -1,5 +1,6 @@
 import HeadingTitle from "@/shared/title/HeadingTitle";
 import SaleCard from "./SaleCard";
+import saleProduct1 from "../../../assets/images/saleproduct1.webp";
 
 const SaleProducts = () => {
   return (
@@ -14,42 +15,49 @@ const SaleProducts = () => {
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
         <SaleCard
           brandName="VW MERCH"
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
 
         <SaleCard
@@ -57,6 +65,7 @@ const SaleProducts = () => {
           itemName={`"Campers On Tour" Enamel Campervan Mug`}
           currentPrice={6.75}
           previousPrice={8.75}
+          img={saleProduct1}
         ></SaleCard>
       </div>
     </div>
