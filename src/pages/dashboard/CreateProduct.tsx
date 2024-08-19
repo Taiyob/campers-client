@@ -18,36 +18,31 @@ const CreateProduct = () => {
   const [create] = useCreateMutation();
 
   const [newImage, setNewImage] = useState("");
-  const handleAddImage = () => {
-    if (newImage) {
-      // Update the images array
-      dispatch(setImages([...images, newImage]));
-      setNewImage(""); // Clear the input field after adding
-    }
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (newImage) {
+      dispatch(setImages([...images, newImage]));
+    }
+
     try {
-      // Call the create mutation function
       await create({
         name,
         price,
         stockQuantity,
         description,
         categoryId,
-        images,
+        images: newImage ? [...images, newImage] : images,
       }).unwrap();
-      // Optionally handle success (e.g., show a success message or redirect)
     } catch (error) {
-      // Optionally handle error (e.g., show an error message)
       console.error("Failed to create product:", error);
     }
   };
 
   return (
     <div>
-      <h2 className="text-3xl text-green-500 font-bold my-10 text-center">
+      <h2 className="my-10 text-3xl font-bold text-center text-green-500">
         Add New Item
       </h2>
       <form onSubmit={handleSubmit} className="max-w-sm mx-auto">
@@ -112,7 +107,7 @@ const CreateProduct = () => {
           <textarea
             id="description"
             name="description"
-            rows="4"
+            rows={4}
             value={description}
             onChange={(e) => dispatch(setDescription(e.target.value))}
             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -164,7 +159,7 @@ const CreateProduct = () => {
           </div>
           <label
             htmlFor="terms"
-            className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            className="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300"
           >
             I agree with the{" "}
             <a
@@ -177,7 +172,6 @@ const CreateProduct = () => {
         </div> */}
         <button
           type="submit"
-          onClick={handleAddImage}
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Create
