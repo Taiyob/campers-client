@@ -11,7 +11,7 @@ import {
 
 const BottomNav = () => {
   return (
-    <div className="bg-[#3a8472] max-w-[2520px] mx-auto px-4 py-2 md:px-10 xl:px-20 flex justify-around">
+    <div className=" bg-[#3a8472] max-w-[2520px] mx-auto px-4 py-2 md:px-10 xl:px-20 flex justify-around">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem className="">
