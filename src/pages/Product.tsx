@@ -17,10 +17,10 @@ const Product = () => {
         role="status"
         className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex "
       >
-        <div className="flex items-center justify-center w-full h-48 bg-gray-300 sm:w-96 dark:bg-gray-700">
+        <div className="flex items-center justify-center w-full h-48 bg-[#f5f5f5] sm:w-96 dark:bg-gray-700">
           <h1>Left</h1>
         </div>
-        <div className="w-full bg-gray-400">
+        <div className="w-full bg-[#f5f5f5]">
           <h1>Right</h1>
         </div>
         <span className="sr-only">Loading...</span>
