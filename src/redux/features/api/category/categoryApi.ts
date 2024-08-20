@@ -2,7 +2,7 @@ import { baseApi } from "../baseApi";
 
 const categoryApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    create: builder.mutation({
+    createCategory: builder.mutation({
       query: (categoryInfo) => ({
         url: `/categories`,
         method: "POST",
@@ -12,4 +12,4 @@ const categoryApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useCreateMutation } = categoryApi;
+export const { useCreateCategoryMutation } = categoryApi;

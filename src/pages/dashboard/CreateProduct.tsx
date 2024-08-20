@@ -15,7 +15,7 @@ const CreateProduct = () => {
   const dispatch = useAppDispatch();
   const { name, price, stockQuantity, description, categoryId, images } =
     useAppSelector((state: RootState) => state.product);
-  const [create] = useCreateMutation();
+  const [create] = useCreateMutation(undefined);
 
   const [newImage, setNewImage] = useState("");
 
