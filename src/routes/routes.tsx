@@ -4,6 +4,7 @@ import CreateProduct from "@/pages/dashboard/CreateProduct";
 import DashboardHome from "@/pages/dashboard/DashboardHome";
 import Home from "@/pages/Home";
 import Product from "@/pages/Product";
+import CreateCategory from "@/pages/dashboard/CreateCategory";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "create-product",
         element: <CreateProduct />,
+      },
+      {
+        path: "create-category",
+        element: <CreateCategory />,
       },
     ],
   },
