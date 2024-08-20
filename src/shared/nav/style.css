@@ -1,14 +1,29 @@
-.navigation-menu-content {
-  position: absolute;
-  top: 100%; /* Position dropdown below the menu item */
-  left: 0; /* Align with the left edge of the menu item */
-  z-index: 1000; /* Ensure dropdown is above other content */
-  /* Optional styling */
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
+/* Ensure dropdown positioning */
+.relative {
+  position: relative;
 }
 
-.navigation-menu-item {
-  position: relative; /* Ensure dropdown positions relative to the menu item */
+.absolute {
+  position: absolute;
+}
+
+.top-full {
+  top: 100%;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.mt-2 {
+  margin-top: 0.5rem; /* Adjust this as necessary */
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+/* Optional: Style for debugging */
+.border {
+  border: 1px solid red; /* Debugging border */
 }
