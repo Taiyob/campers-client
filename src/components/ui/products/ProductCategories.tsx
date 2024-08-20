@@ -10,7 +10,7 @@ type TCategory = {
 
 const ProductCategories = () => {
   const { data } = useGetAllCategoriesQuery(undefined);
-  console.log(data.data);
+  console.log(data?.data);
   return (
     <div className="max-w-[2520px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
       <HeadingTitle

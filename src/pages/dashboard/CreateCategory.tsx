@@ -6,7 +6,7 @@ import { RootState } from "@/redux/store";
 const CreateCategory = () => {
   const dispatch = useAppDispatch();
   const { name, image } = useAppSelector((state: RootState) => state.category);
-  const [createCategory] = useCreateCategoryMutation(undefined);
+  const [createCategory] = useCreateCategoryMutation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
