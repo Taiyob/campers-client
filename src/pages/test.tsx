@@ -202,18 +202,25 @@ const Product = () => {
 /*
   <button
               onClick={decrement}
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gray-100 text-xl font-semibold border-0 border-r-2 border-black rounded-none hover:bg-gray-100 hover:border-black"
+              className="text-xl font-semibold bg-gray-100 border-0 border-r-2 border-black rounded-none btn btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:bg-gray-100 hover:border-black"
             >
               -
             </button>
             <span className="mx-4 text-xl">{count}</span>
             <button
               onClick={increment}
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gray-100 text-xl font-semibold border-0 border-l-2 border-black rounded-none hover:bg-gray-100 hover:border-black"
+              className="text-xl font-semibold bg-gray-100 border-0 border-l-2 border-black rounded-none btn btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:bg-gray-100 hover:border-black"
             >
               +
             </button>
-            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-600 ml-3">
+            <button className="ml-3 bg-red-600 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
               Add to basket
             </button>
 */
+
+{
+  /* <div className="divider divider-vertical"></div> */
+}
+{
+  /* <div className="w-1 h-full bg-gray-300"></div> */
+}

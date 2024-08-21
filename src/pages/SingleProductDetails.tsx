@@ -1,15 +1,12 @@
 import ImageMagnifier from "@/components/ImageMagnifier";
 import product1 from "../assets/images/saleproduct1.webp";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
+import BreadCrumbs from "@/shared/breadcrumbs/BreadCrumbs";
+import CounterButton from "@/shared/counterButton/CounterButton";
+import RelatedProduct from "@/components/ui/products/RelatedProduct";
 
 const SingleProductDetails = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count > 0 ? count - 1 : 0);
-
   return (
     <div className="max-w-[1500px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4">
       <div className="grid grid-cols-2 gap-2 mt-10">
@@ -27,17 +24,7 @@ const SingleProductDetails = () => {
           />
         </div>
         <div className="">
-          <div className="text-sm breadcrumbs">
-            <ul>
-              <li>
-                <a>Home</a>
-              </li>
-              <li>
-                <a>Documents</a>
-              </li>
-              <li>Add Document</li>
-            </ul>
-          </div>
+          <BreadCrumbs />
           <h1 className="mb-10 text-4xl font-bold">
             Addis 3 in 1 Sponge Scourer (3pk)
           </h1>
@@ -45,24 +32,7 @@ const SingleProductDetails = () => {
             <sup>tk</sup>45.00
           </span>
           <h3 className="mt-5 text-xl text-gray-400">3 in 1 Sponge Set</h3>
-          <div className="flex items-center w-1/5 my-10 bg-gray-100 border border-gray-100 rounded-full">
-            <button
-              onClick={decrement}
-              className="px-4 py-2 text-xl font-semibold bg-gray-100 border-r border-black rounded-tl-full rounded-bl-full"
-            >
-              -
-            </button>
-            <span className="mx-4 text-xl">{count}</span>
-            <button
-              onClick={increment}
-              className="px-4 py-2 text-xl font-semibold bg-gray-100 border-l border-black rounded-tr-full rounded-br-full"
-            >
-              +
-            </button>
-            <button className="ml-3 text-white btn btn-active btn-primary">
-              Add to basket
-            </button>
-          </div>
+          <CounterButton />
           <div className="mt-5">
             <Link
               to="/"
@@ -104,6 +74,7 @@ const SingleProductDetails = () => {
         <p>From time to time we have special offers on awnings.</p>
         <p>Please check before purchasing this service.</p>
       </div>
+      <RelatedProduct />
     </div>
   );
 };
