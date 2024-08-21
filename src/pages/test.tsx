@@ -198,3 +198,22 @@ const Product = () => {
   export default Product;
   
 */
+
+/*
+  <button
+              onClick={decrement}
+              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gray-100 text-xl font-semibold border-0 border-r-2 border-black rounded-none hover:bg-gray-100 hover:border-black"
+            >
+              -
+            </button>
+            <span className="mx-4 text-xl">{count}</span>
+            <button
+              onClick={increment}
+              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-gray-100 text-xl font-semibold border-0 border-l-2 border-black rounded-none hover:bg-gray-100 hover:border-black"
+            >
+              +
+            </button>
+            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-red-600 ml-3">
+              Add to basket
+            </button>
+*/
