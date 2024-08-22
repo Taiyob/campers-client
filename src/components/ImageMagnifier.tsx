@@ -25,7 +25,7 @@ const ImageMagnifier = ({
   const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
   const [[x, y], setXY] = useState([0, 0]);
 
-  const mouseEnter = (e) => {
+  const mouseEnter = (e: React.MouseEvent<HTMLImageElement>) => {
     const el = e.currentTarget;
 
     const { width, height } = el.getBoundingClientRect();
@@ -33,12 +33,12 @@ const ImageMagnifier = ({
     setShowMagnifier(true);
   };
 
-  const mouseLeave = (e) => {
+  const mouseLeave = (e: React.MouseEvent<HTMLImageElement>) => {
     e.preventDefault();
     setShowMagnifier(false);
   };
 
-  const mouseMove = (e) => {
+  const mouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
     const el = e.currentTarget;
     const { top, left } = el.getBoundingClientRect();
 

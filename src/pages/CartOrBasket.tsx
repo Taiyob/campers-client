@@ -1,4 +1,5 @@
 import SaleCard from "@/components/ui/products/SaleCard";
+import saleProduct1 from "../assets/images/saleproduct1.webp";
 
 const CartOrBasket = () => {
   return (
@@ -327,7 +328,13 @@ const CartOrBasket = () => {
       <div className="space-y-2">
         <h1 className="text-4xl font-bold text-black">Related Products</h1>
         <div className="flex">
-          <SaleCard />
+          <SaleCard
+            brandName="Image Brand"
+            itemName="Image"
+            currentPrice={5.75}
+            previousPrice={8.75}
+            img={saleProduct1}
+          ></SaleCard>
         </div>
       </div>
     </div>
