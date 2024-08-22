@@ -1,5 +1,6 @@
 import SaleCard from "@/components/ui/products/SaleCard";
 import saleProduct1 from "../assets/images/saleproduct1.webp";
+import { Link } from "react-router-dom";
 
 const CartOrBasket = () => {
   return (
@@ -319,9 +320,12 @@ const CartOrBasket = () => {
               <span className="text-sm text-gray-400">Total</span>
               <span className="text-sm font-bold text-black">tk45.00</span>
             </h5>
-            <button className="w-full py-2 text-white bg-red-500">
+            <Link
+              to="/checkout"
+              className="w-full py-2 text-center text-white bg-red-500"
+            >
               Proceed to checkout
-            </button>
+            </Link>
           </div>
         </div>
       </div>

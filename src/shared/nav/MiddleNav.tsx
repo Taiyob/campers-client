@@ -8,11 +8,13 @@ const MiddleNav = () => {
     <div className="flex flex-col md:flex-row justify-between items-center max-w-[2000px] mx-auto px-4 py-2 md:px-10 xl:px-20">
       {/* Logo */}
       <div className="mb-4 md:mb-0">
-        <img
-          className="w-20 h-auto sm:w-24 md:w-32 lg:w-40 xl:w-48"
-          src={logo}
-          alt="Logo"
-        />
+        <Link to="/">
+          <img
+            className="w-20 h-auto sm:w-24 md:w-32 lg:w-40 xl:w-48"
+            src={logo}
+            alt="Logo"
+          />
+        </Link>
       </div>
 
       {/* Search Bar */}

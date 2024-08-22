@@ -35,7 +35,7 @@ const SingleProductDetails = () => {
           <CounterButton />
           <div className="mt-5">
             <Link
-              to="/"
+              to="/wishlist"
               className="flex items-center gap-3 text-xl text-green-500"
             >
               <CiHeart className="text-xl text-green-500" />

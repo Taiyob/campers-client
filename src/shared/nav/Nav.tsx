@@ -1,4 +1,5 @@
 import BottomNav from "./BottomNav";
+//import { NavigationMenuDemo } from "./BottomNavigation";
 import MiddleNav from "./MiddleNav";
 import TopNav from "./TopNav";
 
@@ -8,6 +9,7 @@ const Nav = () => {
       <TopNav />
       <MiddleNav />
       <BottomNav />
+      {/* <NavigationMenuDemo /> */}
     </div>
   );
 };

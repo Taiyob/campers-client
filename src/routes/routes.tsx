@@ -9,6 +9,8 @@ import SingleProductDetails from "@/pages/SingleProductDetails";
 import WishList from "@/pages/WishList";
 import CartOrBasket from "@/pages/CartOrBasket";
 import CheckOut from "@/pages/CheckOut";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
   {
     path: "/checkout",
     element: <CheckOut />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/dashboard",
