@@ -1,5 +1,6 @@
-import BottomNav from "./BottomNav";
+//import BottomNav from "./BottomNav";
 //import { NavigationMenuDemo } from "./BottomNavigation";
+import { NavigationMenuDemo } from "./BottomNavigation";
 import MiddleNav from "./MiddleNav";
 import TopNav from "./TopNav";
 
@@ -8,8 +9,8 @@ const Nav = () => {
     <div className="">
       <TopNav />
       <MiddleNav />
-      <BottomNav />
-      {/* <NavigationMenuDemo /> */}
+      {/* <BottomNav /> */}
+      <NavigationMenuDemo />
     </div>
   );
 };
