@@ -1,3 +1,4 @@
+//import { image_hosting_key } from "@/pages/dashboard/CreateProduct";
 import { baseApi } from "../baseApi";
 
 const productApi = baseApi.injectEndpoints({
@@ -21,6 +22,12 @@ const productApi = baseApi.injectEndpoints({
         method: "GET",
       }),
     }),
+    // uploadImage: builder.mutation({
+    //   query: () => ({
+    //     url: `https://api.imgbb.com/1/upload?key=${image_hosting_key}`,
+    //     method: "POST",
+    //   }),
+    // }),
   }),
 });
 
