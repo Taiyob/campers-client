@@ -2,7 +2,6 @@ import { useCreateMutation } from "@/redux/features/api/product/productApi";
 import {
   setCategoryId,
   setDescription,
-  setImages,
   setName,
   setPrice,
   setStockQuantity,
@@ -11,20 +10,49 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { RootState } from "@/redux/store";
 import { useState } from "react";
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+
 const CreateProduct = () => {
   const dispatch = useAppDispatch();
   const { name, price, stockQuantity, description, categoryId, images } =
     useAppSelector((state: RootState) => state.product);
   const [create] = useCreateMutation();
 
-  const [newImage, setNewImage] = useState("");
+  const [newImages, setNewImages] = useState<File[]>([]);
+  const [imagePreviews, setImagePreviews] = useState<string[]>([]);
+
+  const handleImageUpload = async (files: File[]) => {
+    const uploadedImageUrls: string[] = [];
+
+    for (const file of files) {
+      const formData = new FormData();
+      formData.append("image", file);
+
+      try {
+        const response = await fetch(image_hosting_api, {
+          method: "POST",
+          body: formData,
+        });
+        const data = await response.json();
+        if (data.status === 200) {
+          console.log(data);
+          uploadedImageUrls.push(data.data.url);
+        } else {
+          console.error("Image upload failed:", data.error.message);
+        }
+      } catch (error) {
+        console.error("Failed to upload image:", error);
+      }
+    }
+
+    return uploadedImageUrls;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (newImage) {
-      dispatch(setImages([...images, newImage]));
-    }
+    const uploadedImageUrls = await handleImageUpload(newImages);
 
     try {
       await create({
@@ -33,10 +61,18 @@ const CreateProduct = () => {
         stockQuantity,
         description,
         categoryId,
-        images: newImage ? [...images, newImage] : images,
+        images: [...images, ...uploadedImageUrls],
       }).unwrap();
     } catch (error) {
       console.error("Failed to create product:", error);
+    }
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const files = Array.from(e.target.files);
+      setNewImages(files);
+      setImagePreviews(files.map((file) => URL.createObjectURL(file)));
     }
   };
 
@@ -135,17 +171,27 @@ const CreateProduct = () => {
             htmlFor="images"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Image
+            Images
           </label>
           <input
-            type="text"
+            type="file"
             id="images"
             name="images"
-            value={newImage}
-            onChange={(e) => setNewImage(e.target.value)}
+            accept="image/*"
+            multiple
+            onChange={handleImageChange}
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            required
           />
+          <div className="mt-3">
+            {imagePreviews.map((preview, index) => (
+              <img
+                key={index}
+                src={preview}
+                alt={`Preview ${index}`}
+                className="w-32 h-32 object-cover mr-2 mb-2 inline-block"
+              />
+            ))}
+          </div>
         </div>
         {/* <div className="flex items-start mb-5">
           <div className="flex items-center h-5">
