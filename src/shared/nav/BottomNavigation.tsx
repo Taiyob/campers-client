@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu className="flex flex-col md:flex-row justify-between items-center bg-[#3a8472] max-w-[2520px] mx-auto px-4 py-2 md:px-10 xl:px-20">
-      <NavigationMenuList>
+      <NavigationMenuList className=" md:space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Camp/Hike</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -40,18 +40,33 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>All Products</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link className={navigationMenuTriggerStyle()} to="/docs">
-                    Documentation
+                  <Link
+                    className={navigationMenuTriggerStyle()}
+                    to="/dashboard"
+                  >
+                    Dashboard
                   </Link>
                 </NavigationMenuLink>
               </li>
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Offer</NavigationMenuTrigger>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>By Brand</NavigationMenuTrigger>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>User</NavigationMenuTrigger>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -77,7 +77,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M1 1h16"
@@ -87,7 +87,7 @@ const CartOrBasket = () => {
                       <div>
                         <input
                           type="number"
-                          id="first_product"
+                          //id="first_product"
                           className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="1"
                           required
@@ -107,7 +107,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M9 1v16M1 9h16"
@@ -155,7 +155,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M1 1h16"
@@ -165,7 +165,7 @@ const CartOrBasket = () => {
                       <div className="ms-3">
                         <input
                           type="number"
-                          id="first_product"
+                          // id="first_product"
                           className="bg-gray-50 w-14 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="1"
                           required
@@ -185,7 +185,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M9 1v16M1 9h16"
@@ -233,7 +233,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M1 1h16"
@@ -263,7 +263,7 @@ const CartOrBasket = () => {
                         >
                           <path
                             stroke="currentColor"
-                            stokelinecap="round"
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
                             d="M9 1v16M1 9h16"
